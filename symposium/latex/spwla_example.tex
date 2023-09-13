@@ -20,8 +20,10 @@
 %\bibpunct{(}{)}{;}{a}{ }{,}
 %\usepackage[labelfont={bf},justification=RaggedRight,textfont=normal]{caption}
 \usepackage{caption}
+
 %\captionsetup{labelfont=bf,textfont=normal,justification=justified,labelsep=endash,aboveskip=2pt}
 \captionsetup{labelfont=bf,textfont=normal,justification=justified,aboveskip=2pt}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \usepackage[export]{adjustbox}
 \usepackage[capitalize, nameinlink]{cleveref}
 \crefdefaultlabelformat{#2\textbf{#1}#3} % <-- Only #1 in \textbf
@@ -38,8 +40,7 @@
 %\emergencystretch=\maxdimen
 %\hyphenpenalty=10000
 %\hbadness=10000
-
-\def\headername{{SPWLA 64$^\textbf{th}$ Annual Logging Symposium, June 10--14, 2023}}
+\def\headername{{SPWLA 65$^\textbf{th}$ Annual Logging Symposium, May 18--22, 2024}}
 
 \setcounter{page}{1}
 
@@ -48,6 +49,9 @@
    \renewcommand{\p@subfigure}{}
    \renewcommand{\@thesubfigure}{(\alph{subfigure})\hskip\subfiglabelskip}
 \makeatother
+
+\renewcommand\sectionmark[1]{%
+	\markright{\thesection\ #1}}
 
 %\setcounter{page}{11}
 
@@ -95,8 +99,7 @@
 %
 %   Author(s)
 %
-\author{Stephanie Turner and Sharon Johnson, The SPWLA Business Office
-}
+\author{Mario Martins Ramos, Fernando Vizeu, Rodrigo Dutra, José Augusto Vitorino Dias, João Vitor Alves Estrella, Jordan Jusbig Salas Cuno, Ana Carla dos Santos Pinheiro, Antonio Fernando Menezes Freire, Wagner Moreira Lupinacci}
 
 % Headers
 \headsep = 0.5 in
@@ -115,10 +118,10 @@
 
 \noindent \parbox[t]{75mm}{ \scriptsize \rmfamily \noindent
 	
-	Copyright 2023, held jointly by the Society of Petrophysicists and Well Log Analysts (SPWLA) and the submitting authors.
+	Copyright 2024, held jointly by the Society of Petrophysicists and Well Log Analysts (SPWLA) and the submitting authors.
 	
-	This paper was prepared for the SPWLA 64$^\text{th}$ Annual Logging
-        Symposium held in Lake Conroe, TX, USA, June 10--14, 2023.
+	This paper was prepared for the SPWLA 65$^\text{th}$ Annual Logging
+        Symposium held in Rio de Janeiro, RJ, Brazil, May 18--22, 2024.
 }
 \textcolor[rgb]{0.00,0.00,0.00}{\rule{75mm}{0.3mm}}
 
@@ -132,58 +135,56 @@
 \thispagestyle{firststyle}
 
 \section{abstract}
-All papers are to be submitted electronically in Adobe PDF format to Stephanie Turner at stephanie@spwla.org
-
-
-The deadline for draft paper submission is March 27, 2023.
-
-The deadline for final paper submission is April 24, 2023.
-
-In the continuing effort to upgrade the quality and appearance of the Transactions Volume, authors are being asked to use a consistent style of page layout, type style (font), and type size as described herein. This Microsoft Word document will also serve as the format template for your paper. All manuscripts must conform to these instructions. Papers that do not conform will be returned to the corresponding author for reformatting.
-
-The Transactions Volume will be published only in digital format.
+The meteoric rise of the Python programming language did not happen in isolation. Alongside this development, there was a notable amplification in the processing capacity of contemporary computers. Together, these technological advances made it possible for computational operations, which were previously considered expensive and time-consuming, to become more accessible and implementable. This is especially true in the context of academic centers, where research and technological development find fertile ground. Within the vast field of research, petrophysical problems have reaped the benefits of these innovations. With expanded processing capabilities and the versatility of Python, researchers now have the ability to work with massive data sets, especially when it comes to oil wells. Operations ranging from simple data extraction from files in the LAS and DLIS formats, to tasks demanding intense computational power, like machine learning and inversion techniques, have become more efficient and achievable. However, despite these promising advances, one challenge persists. Many of the routines and algorithms that are meticulously developed during academic research are set aside after these activities conclude. These algorithms, rich in potential application, are forgotten, and if there's an interest in reusing them later on, there is often a need to almost redevelop from scratch. It is in this context that the relevance of this work arises. We aim to present practical solutions to this challenge, and one of the pillars of this solution is the software APPy. This software aims to bridge the gap between researchers, both those with deep knowledge in programming and those unfamiliar with the field. APPy offers a platform where the production, reuse, and optimization of algorithms become more integrated and efficient processes, eliminating the barrier that often prevents the reuse of valuable solutions. In this way, we seek a more connected academia, where knowledge is shared and maximized for the benefit of research and practical application.
 
 
 \section{introduction}
-SPWLA has required electronic submission of Symposium papers since 2004. All papers are to be submitted electronically in Adobe PDF format to Stephanie Turner at stephanie@spwla.org.
+Python, over the years, has seen phenomenal growth, and it has become one of the most popular programming languages worldwide. Initially developed in the late 1980s by Guido van Rossum, Python's simplicity, readability, and versatility have made it the first choice for many developers and industries \citep{pysftw2021}. Its growth can be attributed to a combination of factors. One significant reason is its wide application in emerging fields, such as data science, artificial intelligence, machine learning, and web development.
 
-The deadline for paper submission is March 27, 2023 and the deadline for final
-paper submission is April 24, 2023. Please do not use security coding (passwords) when sending the PDF file. We do recommend that you submit earlier, so that there is time to make any corrections if the committee finds issues with the formatting. A manuscript with formatting issues will be returned for revision if time permits or removed from the program if time does not permit corrections.
+Several studies and surveys, including those from Stack Overflow, have highlighted Python's soaring popularity. Stack Overflow, a major platform for developers to learn and share their knowledge, has observed an increasing number of questions related to Python over the years \citep{stackoverflow2017}. This is indicative of a growing community of Python developers and enthusiasts. Additionally, the language's extensive libraries and frameworks, coupled with a supportive community, have made Python an attractive choice for both beginners and experienced developers (\cref{fig:languages}).
 
-The layout of this instruction complies with the Guidelines for Manuscript Preparation and may be used as a template. All manuscripts must conform to these instructions.
+\begin{figure}[H]
+	\centering
+	\adjincludegraphics[width=3.125in, trim={{.0
+			\width} {.0\width} {.0\width} {0.0\width}},clip]%
+	{figs/fig_1.png}
+	%{Overview_examples_crop.png}
+	\caption{Most popular languages survey \citep{stackoverflow2019,stackoverflow2022}.}
+	\label{fig:languages}
+\end{figure}
 
-\section{general instructions}
-The page size in the file must be US letter (8.5 by 11 inches), in “portrait” layout. Maximum paper length is 30 pages, including all text and figures. Again, we strongly recommend that all figures and tables are embedded in the text, but we realize that in some cases figures may need to follow the text. The extended number of pages allows authors to add images that are easy to read and large enough for clarity
+Also, based on the most recent data from Stack Overflow's annual developer survey, JavaScript maintains its status as one of the most popular and widely used programming languages in the world (\cref{fig:languages}). For several years running, an overwhelming majority of developers have reported using JavaScript, with its dominance evident across both front-end and back-end development domains \citep{jsstate2021}. The data suggests that the language's adaptability, coupled with the continual emergence of modern libraries and frameworks, has solidified its importance in the ever-evolving landscape of web technologies. Additionally, the active and expansive community support evident on platforms like Stack Overflow indicates that JavaScript's relevance is not merely a reflection of its historical significance but also a testament to its current vitality and potential for future innovation.
 
-\section{manuscript organization}
+Considering database language, SQL's enduring relevance stems from its ubiquity across most relational database management systems, its standardization by ANSI, the optimized performance of relational databases, its maturity from decades of use, and its persistent demand in various tech job roles \citep{winand2012}. However, its prominence might be challenged in the future by the rise of NoSQL databases, potential advancements in newer query languages, and integrated platforms that provide query solutions without the direct need for SQL \citep{avantika2022}. Despite these challenges, as of 2023 to 2024, SQL's foundational position in data management suggests it will likely remain significant for years to come \citep{stackoverflow2022}.
+
+The rapid growth of popularity of programing languages, results in one last question to answer: Is still valid to develop softwares, or everyone should learn some programing languages? While the production of software remains crucial in our technologically driven world \citep{usbureau2023}, with a growing demand seen in sectors like machine learning, IoT, and augmented reality, the need for individuals to learn programming is more nuanced. A basic understanding of programming concepts is beneficial for many, akin to how understanding arithmetic doesn't make everyone a mathematician. As digital transformation becomes more pervasive, underscored by reports like the World Economic Forum's "The Future of Jobs Report 2020" \citep{weforum2020} it's clear that a foundation in digital literacy is becoming increasingly important. However, this doesn't necessarily translate to proficiency in specific programming languages for everyone. Instead, understanding the logic and problem-solving approach inherent to programming may be more vital.
+
+Consequently, despite the substantial proliferation of programming languages, there remains a valid need for the development of software applications to cater to the increasing demand for emergent technologies. Furthermore, the employment of the aforementioned technologies (Python, SQL, and Javascript) appears to be of significant relevance in the development of such software applications. 
+
+Besides the global trend that drives software development in multiple application fields, the specific scenario of petrophysical software outlines a particularly distinctive niche within the technological spectrum. This software area is often highlighted, especially in the academic context, due to a series of challenges and opportunities that fuel innovation. Firstly, the cost associated with the licenses of these softwares are often high, making it frequently unfeasible given the budget constraints of many academic and research projects. Additionally, the operational opacity and the lack of transparent documentation regarding the functionalities and methods implemented in these software programs limit adaptability and customization. This limitation becomes particularly significant when considering the implementation of new methodologies and approaches, a challenge for both experienced developers and professionals who lack extensive programming experience. Thus, there's a growing demand for the development of more accessible, transparent, and adaptable solutions in the realm of petrophysical software. Therefore, this ``environment'' was conducive to the emergence of the petrophysical evaluation software APPy.
+
+
+\section{Methodological premises of the APPy software}
+The foundational principles guiding the development of the APPy software were twofold. First and foremost, it sought to address the primary requirements for software tailored to the academic needs pertaining to petrophysical evaluation within university environments. Secondly, it was imperative for APPy to establish itself as both competitive and dependable in the broader software landscape. Subsequent sections will delve deeper into these specific requirements and the rationale behind their prioritization.
+
+\subsection{Academic necessities and development environment}
+Petrophysics is commonly intertwined with geophysics, engineering, and geology. A significant portion of students in these fields have encountered, or will encounter, Python at some juncture in their academic journey \citep{guo2014}. It's thus anticipated that many students will incorporate Python into their research. Even those who don't work with Python directly often possess a foundational understanding of the language, enough to utilize code written by others. This familiarity has made Python a unifying language among students, fostering collaboration and innovation.
+
+Given this context, the foundational design principle for the APPy software is its identity as a 'Python-centric' tool. This entails that the majority of its functionalities are linked to the Python language, ensuring that most students can effortlessly interact with and enhance the software to meet their specific academic requirements or those of their research group.
+
+Adopting Python in academic settings addresses three primary challenges posed by other software:
+
 \begin{itemize}
-    \item Title (centered over both columns)
-    \item Author(s) and affiliation(s) (centered over both columns)
-    \item Copyright statement
-    \item Abstract (maximum 400 words)
-    \item Text (including figures and tables)
-    \item Conclusions
-    \item Acknowledgments, if needed
-    \item Nomenclature (divided into two lists: Abbreviations and Symbols)
-    \item References
-    \item About the Author(s)
-    \item Appendix, if needed
-    \item Tables, then figures, if not embedded in text columns
+	\item Cost-efficiency: Python is free.
+	\item Transparency: As an open-source, interpreted language, Python's workings are accessible and understandable.
+	\item Modularity: Python boasts a plethora of libraries, including those tailored for geosciences and petrophysics.
 \end{itemize}
 
-\section{page layout}
-Page size. Manuscripts should be formatted for 8 1/2 inches by 11 inches paper. European A4 paper size is not acceptable.
+While these advantages are particularly appreciated by students familiar with Python, they may pose barriers for those who don't regularly engage with the language.
 
-Margins. Left margin on odd numbered pages should be 1 1/4 inches (30mm), right margin 3/4 inch (20mm); right margin on even numbered pages should be 1 1/4 inches, left margin 3/4 inch. (Microsoft Word: gutter = 0, mirror margins on). Top margin 1 1/4 inch below top edge of paper.
+\subsection{Competitiveness in the broad software landscape}
 
-Columns. Text must be printed in two columns to a page and separated by 0.25 inches. 
-
-Pages. Maximum paper length is 30 pages, including text and figures. THERE WILL BE NO EXCEPTIONS. A manuscript in excess of 25 pages will be returned for revision if time permits or pulled if time does not permit.
-
-Page numbering. Center the page number 1/2 inch (12mm) above the bottom of each page.
-
-Header. All pages must have the following header: “SPWLA 64th Annual Logging
-Symposium, June 10--14, 2023” This header should be on the right side of odd pages and the left side of even pages, and be in 10-point Bold Times New Roman font (or the closest approximation possible).
+To ensure that the software are able to acquire some competitiveness in the present day, even in its development stage, its imprecidible that it follows two principal development guidelines: microservices and incremental development.
 
 \section{type style and size}
 Type style (font). A proportionally spaced, serif font, Times or Times Roman, is preferred. If this is not possible, use the closest approximation available. (This is Times New Roman, 10-point.)
@@ -305,6 +306,6 @@ The authors would like to acknowledge ...
 	\includegraphics[width=1.0\linewidth]{SPWLA-2023-Logo.png}
 	\vspace{0.03in}
 \end{wrapfigure}
-\textbf{Author 2} is a Non-Profit corporation founded in 1959. Dedicated to the advancement of petrophysics focusing on log and core measurements, formation evaluation techniques, hydrocarbon, mineral and water resources.
+\textbf{Author 2} is a Non-Profit corporation founded in 1959. Dedicated to the advancement of petrophysics focusing on log and core measurements, formation evaluation techniques, hydrocarbon, mineral and water resources. is a Non-Profit corporation founded in 1959. Dedicated to the advancement of petrophysics focusing on log and core measurements, formation evaluation techniques, hydrocarbon, mineral and water resources.
 
 \end{document}

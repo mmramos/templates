@@ -50,8 +50,6 @@
    \renewcommand{\@thesubfigure}{(\alph{subfigure})\hskip\subfiglabelskip}
 \makeatother
 
-\renewcommand\sectionmark[1]{%
-	\markright{\thesection\ #1}}
 
 %\setcounter{page}{11}
 
@@ -63,7 +61,6 @@
 % for vector symbols; write argument in math and bold
 % can be used inside or outside mathmode
 %
-\newcommand{\vc}[1]{\ensuremath{\mathbf{#1}}}
 %
 % transpose for matrices (math mode only)
 %
@@ -95,11 +92,11 @@
 %
 %   Title
 %
-\title{SPWLA Symposium general instructions for paper manuscript preparation}
+\title{APPy Insights: The New Frontier in Petrophysical Software Planning}
 %
 %   Author(s)
 %
-\author{Mario Martins Ramos, Fernando Vizeu, Rodrigo Dutra, José Augusto Vitorino Dias, João Vitor Alves Estrella, Jordan Jusbig Salas Cuno, Ana Carla dos Santos Pinheiro, Antonio Fernando Menezes Freire, Wagner Moreira Lupinacci}
+\author{Mario Martins Ramos, Fernando Vizeu, Rodrigo Dutra, José Augusto Vitorino Dias, João Vitor Alves Estrella, Jordan Jusbig Salas Cuno, Ana Carla dos Santos Pinheiro, Fábio Júnior Damasceno Fernandes, Antonio Fernando Menezes Freire, Wagner Moreira Lupinacci}
 
 % Headers
 \headsep = 0.5 in
@@ -135,7 +132,7 @@
 \thispagestyle{firststyle}
 
 \section{abstract}
-The meteoric rise of the Python programming language did not happen in isolation. Alongside this development, there was a notable amplification in the processing capacity of contemporary computers. Together, these technological advances made it possible for computational operations, which were previously considered expensive and time-consuming, to become more accessible and implementable. This is especially true in the context of academic centers, where research and technological development find fertile ground. Within the vast field of research, petrophysical problems have reaped the benefits of these innovations. With expanded processing capabilities and the versatility of Python, researchers now have the ability to work with massive data sets, especially when it comes to oil wells. Operations ranging from simple data extraction from files in the LAS and DLIS formats, to tasks demanding intense computational power, like machine learning and inversion techniques, have become more efficient and achievable. However, despite these promising advances, one challenge persists. Many of the routines and algorithms that are meticulously developed during academic research are set aside after these activities conclude. These algorithms, rich in potential application, are forgotten, and if there's an interest in reusing them later on, there is often a need to almost redevelop from scratch. It is in this context that the relevance of this work arises. We aim to present practical solutions to this challenge, and one of the pillars of this solution is the software APPy. This software aims to bridge the gap between researchers, both those with deep knowledge in programming and those unfamiliar with the field. APPy offers a platform where the production, reuse, and optimization of algorithms become more integrated and efficient processes, eliminating the barrier that often prevents the reuse of valuable solutions. In this way, we seek a more connected academia, where knowledge is shared and maximized for the benefit of research and practical application.
+The meteoric rise of the Python programming language did not happen in isolation. Alongside this development, there was a notable amplification in the processing capacity of contemporary computers. Together, these technological advances made it possible for computational operations, which were previously considered expensive and time-consuming, to become more accessible and implementable. This is especially true in the context of academic centers, where research and technological development find fertile ground. Within the vast field of research, petrophysical problems have reaped the benefits of these innovations. With expanded processing capabilities and the versatility of Python, researchers now have the ability to work with massive data sets, especially when it comes to oil wells. Operations ranging from simple data extraction from files in the LAS and DLIS formats, to tasks demanding intense computational power, like machine learning and inversion techniques, have become more efficient and achievable. However, despite these promising advances, one challenge persists. Many of the routines and algorithms that are meticulously developed during academic research are set aside after these activities conclude. These algorithms, rich in potential application, are forgotten, and if there's an interest in reusing them later on, there is often a need to almost redevelop from scratch. It is in this context that the relevance of this work arises. We aim to present practical solutions to this challenge, and one of the pillars of this solution is the software APPy (Petrophysics Evaluation in Python - acronymous in portuguese). This software aims to bridge the gap between researchers, both those with deep knowledge in programming and those unfamiliar with the field. APPy offers a platform where the production, reuse, and optimization of algorithms become more integrated and efficient processes, eliminating the barrier that often prevents the reuse of valuable solutions. In this way, we seek a more connected academia, where knowledge is shared and maximized for the benefit of research and practical application.
 
 
 \section{introduction}
@@ -184,111 +181,78 @@ While these advantages are particularly appreciated by students familiar with Py
 
 \subsection{Competitiveness in the broad software landscape}
 
-To ensure that the software are able to acquire some competitiveness in the present day, even in its development stage, its imprecidible that it follows two principal development guidelines: microservices and incremental development.
+In today's highly competitive software landscape, it's paramount for software applications to have an edge, even during their developmental phases. To achieve this, it's indispensable for the software to adhere to two primary development methodologies: microservices and incremental development. Microservices architecture allows for flexibility and scalability by breaking down an application into smaller, independent services that communicate with one another. On the other hand, incremental development emphasizes the importance of continuous improvement by building software in small, manageable increments, ensuring that each new feature or enhancement is thoroughly tested and integrated. Adopting these strategies not only fosters adaptability and responsiveness but also positions the software favorably in a rapidly evolving market. \citep{fowler2016, cohn2005, rolakuchta2015}.
 
-\section{type style and size}
-Type style (font). A proportionally spaced, serif font, Times or Times Roman, is preferred. If this is not possible, use the closest approximation available. (This is Times New Roman, 10-point.)
+Based on \cite{fowler2016}, microservices are small, individual applications that work together to form a larger system. For a system to be reliable, each microservice must be stable, able to handle increased demand, and recover quickly from failures. Effective monitoring, clear documentation, and secure practices are also essential. In essence microservices can consistently deliver top performance in real-world conditions. In the APPy software, the concept of microservices is primarily implemented through the use of stable and reliable libraries for both Python and JavaScript. The microservices architecture is seamlessly integrated into APPy's core framework, particularly within its command structures. APPy can be operated from the command prompt, executing its primary functions via specific commands. These commands facilitate a range of well-log operations, from project creation and data import to advanced machine learning tasks. An simplified version of this operations are show in the \cref{fig:command_s}.
 
-Type size and line spacing. The main body of the text is single-spaced in 10-point type; line spacing is 12-point (resulting in 6 lines per inch).
-
-\section{headings}
-
-Title. The title should be centered and typed in all capital letters, bold, 14-point, single spaced.
-
-Headings. These should be on a separate line, left justified, easily distinguished from each other and clearly separated from the main body of the text. Bold upper case 10-point, 12-pitch.
-
-First-Level Subheadings. Subheadings are subordinate to headings. The first subheading should be on a separate line above the text. Bold, lowercase, 10-point, 12-pitch line spacing.
-
-Second-Level Subheadings. Any additional subheadings should be on same lines as text. Italics, lowercase, 10-point, 12-pitch line spacing.
-
-\section{citations}
-
-Figures. All figures (graphs, line drawings, photographs, etc.) should be cited in the body of the paper and should be numbered sequentially, see~\cref{fig:logo}. The figures in the text should be labeled as “\textbf{Figure 1}” in bold, 10-point, 12-pitch line spacing.
-
-Tables. All tables should be cited in the body of the paper. Number the tables sequentially as they appear in the paper and include a caption consisting of the table number and a brief description. Tables should be inserted as part of the text as close to its first reference as possible. The tables should be labeled as “\textbf{Table 1}” in bold, 10-point, 12-pitch line spacing.
-
-\begin{figure}
+\begin{figure}[H]
 	\centering
-	\adjincludegraphics[width=3.125in, trim={{.0
+	\adjincludegraphics[width=1.125in, trim={{.0
 			\width} {.0\width} {.0\width} {0.0\width}},clip]%
-	{SPWLA-2023-Logo.png}
-	%{Overview_examples_crop.png}
-	\caption{SPWLA 2023 logo.}
-	\label{fig:logo}
+	{figs/appy_command_s.png}
+	\caption{Illustration of how all interactions between users on APPy and the database are facilitated through commands.}
+	\label{fig:command_s}
+\end{figure}
+The command structure offers a compelling solution to a prevalent problem in many software systems: the absence of modularity. Within APPy, enhancing the platform with new functionalities is made straightforward for users. All they need to do is introduce a new command alongside the existing ones.
+
+Another development methodology prominently utilized in the APPy software is incremental development. This approach ensures that the software remains partially functional even in its early stages of production, permitting the client to engage with the product and offer feedback \citep{rolakuchta2015}. A classic illustration of incremental development can be found in \cref{fig:agile_kn}.
+
+\begin{figure*}[t]
+	\centering
+	\adjincludegraphics[width=5.125in, trim={{.0
+			\width} {.0\width} {.0\width} {0.0\width}},clip]%
+	{figs/kniberg.png}
+	\caption{Schematic illustration of incremental development: In the top scenario, the client receives only the final version of the software; in the bottom scenario, the client can use the software at each stage of development \citep{knibergagile2015}.}
+	\label{fig:agile_kn}
+\end{figure*}
+
+\section{Overall APPy structure}
+
+To address both academic demands and the competitiveness of the software, the decision was made to divide it into three parts: Stoneforge, APPy-core, and APPy-gui. This division allows separate teams to work on distinct portions of APPy with greater autonomy. By doing so, developers can exercise more creative freedom without compromising the software's overall structure and development process. This separation of components ensures that improvements or changes in one section do not adversely impact the others. Moreover, it provides clear delineation of responsibilities, allowing each team to specialize and hone their expertise in their respective areas, leading to a more efficient development cycle. 
+
+Considering the overall operation of APPy, the APPy-core directly accesses the Stoneforge library by importing the library and executing its features. Within the APPy-core's source code, there is an API (Application Programming Interface) that allows for the retrieval of information from the database via the HTTP protocol. Consequently, through this API, the database can be viewed in a browser. This type of access is essential for APPy-gui to access and manipulate well data through an interactive interface. A schematic of this process is presented in \cref{fig:sub_appy}
+
+\begin{figure}[]
+	\centering
+	\adjincludegraphics[width=2.125in, trim={{.0
+			\width} {.0\width} {.0\width} {0.0\width}},clip]%
+	{figs/appy_substructure.png}
+	\caption{Appy conceptual estructure: }
+	\label{fig:sub_appy}
 \end{figure}
 
+\subsection{Stoneforge}
+Stoneforge is a cutting-edge petrophysical library developed in Python. This versatile library encompasses a spectrum of methodologies, ranging from classic techniques for reservoir property estimation—like porosity, clay content, and saturation—to more advanced modules focused on rock physics, pseudo-wells, and machine learning \citep{giecar2023}.
 
-Equations. Equations should be numbered consecutively beginning with (1) throughout the entire paper. The number should be enclosed in parentheses and set flush right in the column on the same line as the equation. It is this number that should be used when referring to equations within the text. Equations should be referenced within the text as “Eq. (x).”
+One of the foundational aspirations of the Stoneforge library is to act as a gateway to the APPy platform. This has been architected with inclusivity in mind, ensuring that Python enthusiasts of varying proficiencies can not only utilize the platform to its fullest but also contribute to its growth by integrating new functionalities.
 
-References. Cite references by author’s last name and year. For two authors write both names, for more than two authors use the format “author1 et al.” Cite all references and include complete information for each citation in "References" section.
+For the intermediate Python user with a foundational understanding of petrophysics, Stoneforge simplifies many processes. They can easily import well data, preprocess it, and perform various operations—all without needing to have the APPy software installed. Furthermore, Stoneforge's commitment to open-source principles greatly augments the transparency of APPy. Given that Stoneforge lays bare many of APPy’s primary features, users and developers can have a clearer understanding and appreciation for the platform's capabilities and functionalities.
 
-\section{references}
+\subsection{APPy-core}
+The APPy-core essentially serves as the "heart" of APPy. The entire software was originally designed around this core, with functionalities added later on. Although one can still use the APPy-core natively via command lines, this feature is quite limited. In its original design, the APPy-core acts as a manager for both database and petrophysical projects. When creating a project, an APPy user establishes two databases: one in SQL (sqlite) and another in HDF5.
 
-Order. References~\citep{Archie1942} should be listed ALPHABETICALLY by the author’s last name. In case of multiple listings by the same author(s), references are listed by date (earliest first) and then alphabetically. Do not use abbreviations. Form and punctuation shown in the examples below should be observed.
+SQL, a widely recognized database language that has been around since the 1970s \citep{boycechan1973}, remains popular to this day \citep{stackoverflow2022}. On the other hand, HDF5, another database language, might not be as well-known as SQL. However, it bears some structural similarities to SQL, with the added benefit of being more suited for storing vast amounts of data. These databases house well data, alongside other details like color codes, mnemonic patterns, and curve units.
 
-Format. Author's last name, followed by their initials, year of publication, title of paper or article (capitalize only the first word of the title and any proper nouns), full name of journal (do not underline or use italics), specific volume number shown as Vol. \#, show beginning and ending page numbers. 10-point, 12-pitch line spacing.
+Furthermore, the APPy-core has an API designed to simplify the development of a separate graphical user interface (GUI) from the main program. This API can be accessed via a browser using a specific HTTP port. Through the API, one can access the database and issue commands.
 
-For books (as applicable): edition, volume, series, chapter, pages, full name and location of publisher.
+Adding new functionalities to APPy is done through commands, which consist of two files: the first has a .appy extension and contains a list of arguments, along with a header for GUI access, and the second file contains the desired functionality coded in Python.
 
-For journals or other periodicals (as applicable): name of publication, volume, issue, page numbers, DOI (if available).
+\subsection{APPy-gui}
+APPy-gui is a specialized interface designed primarily for the visualization and analysis of petrophysical and well log data. The interface is constructed using the Vue.js framework, a choice made for its component-driven architecture, which enables modular and maintainable code structures. These components facilitate the dynamic rendering of complex graphs and charts, a feature essential for deciphering intricate data patterns typical of petrophysics.
 
-For conference papers (as applicable): name, location and date(s) of conference, type of presentation, paper number, DOI (if available). 
+The backend operations of APPy-gui are anchored on a Node.js server. Node.js, with its non-blocking I/O and event-driven model, provides the capability to handle numerous simultaneous client requests, which is especially crucial when dealing with large and multifaceted petrophysical datasets. The interplay between the GUI and its data source is orchestrated through a Python-based API constructed with Flask and Flask RESTful. Flask offers a nimble framework for creating web services, while Flask RESTful extends this capability, providing a structured way to build endpoints for data retrieval, updates, and other CRUD operations. As such, the combined structure ensures efficient data flow between the backend and the APPy-gui, granting users the capability to manipulate and visualize their data seamlessly.
 
-For websites: Author or Site Name. YEAR. Title (page or article). Site name, date posted, web address (accessed date). 
-
-A free resource to find the DOI of a paper is https://www.crossref.org/guestquery/ 
-
-\section{“about the author” section}
-Each author should include a biographical sketch. These should be in the same order as the author listing at the beginning of the paper. Quality photos are encouraged, provided the overall length of the article does not exceed 30 pages.
-
-\section{artwork preparation}
-Identification and captioning. All figures should be identified by a number (“\textbf{Figure 1}”) in bold 10-point font. Number all figures in sequential order and follow with a brief but descriptive caption. 
-
-Location. Illustrations should be placed within the body of text if at all possible, but it is recognized that in certain cases it will be necessary to place them at the end of the paper.
-
-Multiple figures per page. Authors are responsible for arranging multiple figures on each page within the columns where appropriate, or if it is not possible, then at the end of the paper. All lettering must be legible.
-
-Figures resolution. Authors are encouraged to produce high resolution figures before they are inserted in the paper. We recommend illustrations at a resolution of at least 300 dots per inch (dpi) but 600 is preferred. Several petrophysical and scientific software packages already produce high resolution figures. However, a graphics-editing application may be helpful for preparing illustrations. 
-
-\section{use of color}
-Use of color in digital Transactions Volume. The Transactions Volume will include the pdf files, with figures exactly as submitted by the author. Figures may be in color or in black and white at the author’s discretion. However, the author should perform a test print in black and white to ensure legibility, as many readers will print the paper in black and white. 
-
-\section{commercial advertising}
-Logos. Commercial (Company) logos are not to be used in manuscripts.  Manuscripts will be rejected if company logos are present. 
-
-Proprietary names. Generic names should be used instead of proprietary tool or program names. However, there might be cases where a trademark is unavoidable, it can only be used once and identified as such.
-
-Please remember that the goal of the Symposium is to promote technical advancement and exchange. Accordingly, commercially oriented papers are strongly discouraged.
-
-\section{permission/copyright}
-The author is responsible for obtaining permission to use previously published material. A signed letter of permission from the copyright holder must be submitted to the SPWLA Business Office by mail to SPWLA, 8866 Gulf Freeway, Suite 320, Houston, TX 77017). Alternatively, a scan of the executed document may be emailed to stephanie@spwla.org 
-
-The copyright document can be found at http://www.spwlaworld.com/ 
-
-\section{changes and additions}
-Please, re-submit a paper to Stephanie Turner at stephanie@spwla.org if changes
-are needed after the original submission. No changes or additions will be
-accepted after the April 24, 2023 deadline.
-
-\section{summary}
-We continue our commitment to provide a high-quality Transactions Volume. Please
-address any suggestions for improvement to Stephanie Turner at the SPWLA
-Business Office (stephanie@spwla.org) or Iulian Hulea, SPWLA Vice President Technology 
-vp-technology@spwla.org
-
-Thank you for your cooperation.
-
-\section{appendix: petrophysical model}
-
-This appendix describes the petrophysical model assumed in the paper and provides a detailed derivation of the associated equations.
+\subsection{Conclusions}
+The development of APPy began in 2017, and it has now matured over a span of more than six years. Throughout this time, a myriad of students have collaborated on its evolution. While some devoted extended periods to its growth, others played a shorter, yet still significant, role. Every contributor, irrespective of their tenure, has left a distinct imprint on the application. The current version of APPy stands as a testament to the collective effort and dedication of these budding scholars. Beyond offering them an avenue to hone their skills in Python, the project also provided invaluable hands-on experience in software development, aiding their academic and professional journey.
 
 \section{acknowledgments}
-The authors would like to acknowledge ...
+First and foremost, The authors would like to extend their gratitude to everyone involved in the software's development, especially Thiago Rebeque, Ana Carolina, Rishi Kumar Ray, João Reis, and Yuri Alves. We would also like to acknowledge the dedicated users of APPy over its six-year development phase: Jeniffer Nobre, Thaís Candido, Luane Erbe, Carolina Ferreira da Silva, Bruna Maia Imbuzeiro, Lídia Waltz, Isadora Dutra, and Juliana. Our appreciation extends to the Department of Geology and Geophysics, with a special mention to professors Rodrigo Bijani, Francisco Romério Abrantes Júnior, and Victor Matheus Joaquim Salgado Campos. Lastly, our heartfelt thanks go to PETROBRAS for their valuable support, which was instrumental in the development of this software.".
 
 \section{nomenclature}
-\makebox[1.5cm][l]{$bhr$}  Borehole radius, inch\\
-\makebox[1.5cm][l]{$dtm$}  Mud slowness, $\mu$s/ft\\
-\makebox[1.5cm][l]{$rhom$}  Mud density, kg/m$^3$
+\makebox[1.5cm][l]{SQL}  Structured Query Language\\
+\makebox[1.5cm][l]{API}  Application Programming Interface\\
+\makebox[1.5cm][l]{HTTP} Hypertext Transfer Protocol\\
+\makebox[1.5cm][l]{ANSI} American National Standards Institute
 
 \bibliography{spwla_ref}
 
@@ -297,15 +261,15 @@ The authors would like to acknowledge ...
 \section{about the authors}
 \setlength\intextsep{0pt}
 \begin{wrapfigure}{l}{0.33\linewidth}
-	\includegraphics[width=1.0\linewidth]{SPWLA-2023-Logo.png}
+	\includegraphics[width=1.0\linewidth]{logo_giecar3.png}
 	\vspace{0.03in}
 \end{wrapfigure}
-\textbf{SPWLA} is a Non-Profit corporation founded in 1959. Dedicated to the advancement of petrophysics focusing on log and core measurements, formation evaluation techniques, hydrocarbon, mineral and water resources.
+\textbf{Mario Martins Ramos, Fernando Vizeu, Rodrigo Dutra, José Augusto Vitorino Dias, João Vitor Alves Estrella, Jordan Jusbig Salas Cuno, Ana Carla dos Santos Pinheiro, Fábio Júnior Damasceno Fernandes} Are all members of GIECAR - (Grupo de Interpretação Exploratória e Caracterização de Reservatórios).
 
 \begin{wrapfigure}{l}{0.33\linewidth}
-	\includegraphics[width=1.0\linewidth]{SPWLA-2023-Logo.png}
+	\includegraphics[width=1.0\linewidth]{inct-gp.png}
 	\vspace{0.03in}
 \end{wrapfigure}
-\textbf{Author 2} is a Non-Profit corporation founded in 1959. Dedicated to the advancement of petrophysics focusing on log and core measurements, formation evaluation techniques, hydrocarbon, mineral and water resources. is a Non-Profit corporation founded in 1959. Dedicated to the advancement of petrophysics focusing on log and core measurements, formation evaluation techniques, hydrocarbon, mineral and water resources.
+\textbf{Antonio Fernando Menezes Freire, Wagner Moreira Lupinacci} Are professors of Universidade Federal FLuminense (UFF), members of GIECAR and also members of the INCT-GP (Instituto Nacional de Ciência e Tecnologia Geofísica do Petróleo).
 
 \end{document}

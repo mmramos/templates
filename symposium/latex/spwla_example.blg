@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: spwla_example.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: spwla.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Database file #1: spwla_ref.bib
+Warning--entry type for "knibergagile2015" isn't style-file defined
+--line 269 of file spwla_ref.bib
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 16 entries,
+            2975 wiz_defined-function locations,
+            692 strings with 7295 characters,
+and the built_in function-call counts, 6747 in all, are:
+= -- 562
+> -- 180
+< -- 16
++ -- 76
+- -- 54
+* -- 376
+:= -- 1117
+add.period$ -- 61
+call.type$ -- 16
+change.case$ -- 105
+chr.to.int$ -- 16
+cite$ -- 32
+duplicate$ -- 534
+empty$ -- 522
+format.name$ -- 78
+if$ -- 1301
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 123
+newline$ -- 124
+num.names$ -- 64
+pop$ -- 230
+preamble$ -- 1
+purify$ -- 82
+quote$ -- 0
+skip$ -- 221
+stack$ -- 0
+substring$ -- 229
+swap$ -- 191
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 135
+warning$ -- 0
+while$ -- 49
+width$ -- 0
+write$ -- 250
+(There was 1 warning)

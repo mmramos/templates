@@ -1,0 +1,136 @@
+\begin{thebibliography}{16}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+
+\bibitem[{Avantika(2022)}]{avantika2022}
+Avantika, M., 2022.
+\newblock Rise of nosql and why it should matter to you.
+\newblock
+  \urlprefix\url{https://www.simplilearn.com/rise-of-nosql-and-why-it-should-matter-to-you-article}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{avantika2022}
+
+\bibitem[{Boyce and Chamberlin(1973)}]{boycechan1973}
+Boyce, R.~F. and Chamberlin, D.~D., 1973.
+\newblock Using a structured english query language as a data definition
+  facility.
+\newblock \emph{Research Report / RJ / IBM / San Jose, California},
+  \textbf{RJ1318}.
+\newblock \urlprefix\url{https://api.semanticscholar.org/CorpusID:45314360}.
+\bibAnnoteFile{boycechan1973}
+
+\bibitem[{Cohn(2005)}]{cohn2005}
+Cohn, M., 2005.
+\newblock \emph{Agile Estimating and Planning}.
+\newblock Prentice Hall.
+\bibAnnoteFile{cohn2005}
+
+\bibitem[{Fowler(2016)}]{fowler2016}
+Fowler, S., 2016.
+\newblock \emph{{Production-Ready} Microservices}.
+\newblock O'Reilly Media, Sebastopol, CA.
+\bibAnnoteFile{fowler2016}
+
+\bibitem[{GIECAR(2021)}]{giecar2023}
+GIECAR, 2021.
+\newblock Stoneforge.
+\newblock \url{https://github.com/giecaruff/stoneforge}.
+\bibAnnoteFile{giecar2023}
+
+\bibitem[{Guo(2014)}]{guo2014}
+Guo, P., 2014.
+\newblock Python is now the most popular introductory teaching language at top
+  u.s. universities.
+\newblock
+  \urlprefix\url{https://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{guo2014}
+
+\bibitem[{Kniberg(2015)}]{knibergagile2015}
+Kniberg, H., 2015.
+\newblock Agile development illustrated.
+\newblock
+  \urlprefix\url{https://www.scrum.org/resources/blog/what-iterative-incremental-delivery-hunt-perfect-examplen}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{knibergagile2015}
+
+\bibitem[{{Python Software Foundation}(2001)}]{pysftw2021}
+{Python Software Foundation}, 2001.
+\newblock Python history and versions.
+\newblock \urlprefix\url{https://www.python.org/doc/versions/}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{pysftw2021}
+
+\bibitem[{Rola and Kuchta(2015)}]{rolakuchta2015}
+Rola, P. and Kuchta, D., 2015.
+\newblock Implementing scrum method in international teams—a case study.
+\newblock \emph{Open Journal of Social Sciences}, \textbf{03}~(07): 300–305.
+\newblock \doi{10.4236/jss.2015.37043}.
+\newblock \urlprefix\url{http://dx.doi.org/10.4236/jss.2015.37043}.
+\bibAnnoteFile{rolakuchta2015}
+
+\bibitem[{{Stack Overflow}(2017)}]{stackoverflow2017}
+{Stack Overflow}, 2017.
+\newblock The incredible growth of python.
+\newblock
+  \urlprefix\url{https://stackoverflow.blog/2017/09/06/incredible-growth-python/}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{stackoverflow2017}
+
+\bibitem[{{Stack Overflow}(2019)}]{stackoverflow2019}
+{Stack Overflow}, 2019.
+\newblock Developer survey.
+\newblock
+  \urlprefix\url{https://survey.stackoverflow.co/2019education-ed-level-learn/}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{stackoverflow2019}
+
+\bibitem[{{Stack Overflow}(2022)}]{stackoverflow2022}
+{Stack Overflow}, 2022.
+\newblock Developer survey.
+\newblock
+  \urlprefix\url{https://survey.stackoverflow.co/2022education-ed-level-learn/}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{stackoverflow2022}
+
+\bibitem[{{State of JS}(2021)}]{jsstate2021}
+{State of JS}, 2021.
+\newblock The state of javascript 2021 survey.
+\newblock \urlprefix\url{https://stateofjs.com/}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{jsstate2021}
+
+\bibitem[{{U.S. Bureau of Labor Statistics}(2023)}]{usbureau2023}
+{U.S. Bureau of Labor Statistics}, 2023.
+\newblock Software developers: Occupational outlook handbook.
+\newblock
+  \urlprefix\url{https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{usbureau2023}
+
+\bibitem[{Winand(2012)}]{winand2012}
+Winand, M., 2012.
+\newblock \emph{{SQL} Performance Explained}.
+\newblock Winand, Markus, Vienna, Austria.
+\bibAnnoteFile{winand2012}
+
+\bibitem[{{World Economic Forum}(2020)}]{weforum2020}
+{World Economic Forum}, 2020.
+\newblock The future of jobs report 2020.
+\newblock
+  \urlprefix\url{https://www.weforum.org/reports/the-future-of-jobs-report-2020}.
+\newblock Accessed: 2023-09-23.
+\bibAnnoteFile{weforum2020}
+
+\end{thebibliography}
